@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  service1:
+    build: ./service1
+    ports:
+      - "8199:8199"
+    depends_on:
+      - service2
+      - storage
+    volumes:
+      - ./vstorage:/vstorage
+
+  service2:
+    build: ./service2
+    depends_on:
+      - storage
+    volumes:
+      - ./vstorage:/vstorage
+
+  storage:
+    build: ./storage
+    volumes:
+      - storageData:/data
+
+volumes:
+  storageData:
+
+
