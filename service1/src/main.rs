@@ -87,7 +87,6 @@ async fn get_log() -> impl Responder {
 
 fn log_to_vstorage(record: &str) {
     let path = "/vstorage/log.txt";
-    println!("Logging to vstorage: {}", path);
     if let Ok(mut file) = OpenOptions::new().create(true).append(true).open(path) {
         let _ = writeln!(file, "{}", record);
     }
