@@ -1,0 +1,11 @@
+docker network ls
+NETWORK ID     NAME             DRIVER    SCOPE
+c39d60e621da   bridge           bridge    local
+4494e42db197   devops_default   bridge    local
+cbdd170f47b4   host             host      local
+b45f831afeb9   none             null      local
+docker container ls
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+6fec1dfafb60   devops_service1   "./service1"             2 minutes ago   Up 2 minutes   0.0.0.0:8199->8199/tcp, [::]:8199->8199/tcp   devops_service1_1
+8e4ab4ccbcc4   devops_service2   "./e1"                   2 minutes ago   Up 2 minutes                                                 devops_service2_1
+9a44bfdd7027   devops_storage    "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes                                                 devops_storage_1
