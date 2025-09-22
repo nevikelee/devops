@@ -1,0 +1,27 @@
+Used LLM tool: OpenAI GPT-5 (GPT-5 Mini)
+
+Motivation/reason to use LLM: 
+- To faster develop easier parts of programs with new programming languages;
+- To consult whether my thought process makes sense
+("here's the problem I'm facing - I want to try solving it like that. Would it be a correct approach?");
+- To troubleshoot errors - LLM helps point out main reason why build of program failed.
+
+How and why LLM helped:
+- I usually prompt for a really simple example of syntax for the specific problem I have to solve.
+ Then I can see what kind of tools (packages) the LLM suggests using in my project. From this point
+ it's easier to look for specific parts in the documentation. Then I can build the app up from a simple foundation.
+- It helped me to fix errors and bugs - LLM instantly points out the thing I should bring my attention to
+ (translates the error messages into a list of actions I should take).
+
+What kind of mistakes LLM made:
+- It usually had trouble helping with more complex prompts;
+- At some point it started giving around the same answers without changing them when asked to clarify them;
+- The LLM ignored some key requirements about the architecture. The upside of it is that I
+ had to research how to solve the problem myself;
+- It used quite old tools and syntax which are not being used anymore or had been changed. 
+
+What were the things that LLM was not able to provide:
+- It had some troubles with Rust variable ownership. It got me confused with several different methods to "borrow"
+ the variable (e.g., .clone(), .to_owned(), adding & in front of variable).
+
+Other than that, it helped quite heavily to remember how Rust memory management works and how its syntax is organized.
